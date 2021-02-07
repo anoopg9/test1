@@ -25,7 +25,8 @@ Before we start we need to install this
 
 ### Technical Issues that came up during this project
 * Running the program in different port like example (port 8000)
-https://api.spotify.com/v1/artists/{id}/top-tracks
+    
+    https://api.spotify.com/v1/artists/{id}/top-tracks
 * Adding  “?market=US” after the top tracks gave me an error for the params. Instead I had to make a separate variable PARAMS ={“market”: ‘US’}
 * Another Issues tha I got is index slices when reading through JSON file. To fix this and read clearly I used JSON Formatter
 
@@ -35,5 +36,5 @@ https://api.spotify.com/v1/artists/{id}/top-tracks
 ### Additional Features
 * Add more HTML and CSS to actually make the border filled with Iphone color
 * User Search for the artist instead of hard coding the artist (Down below Link should help us with that)
- 
-https://developer.spotify.com/documentation/web-api/reference/#category-search
+    
+    https://developer.spotify.com/documentation/web-api/reference/#category-search
