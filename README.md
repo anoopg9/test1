@@ -4,7 +4,7 @@ Before we start we need to install this
 
 1. Requires Flask
 *	sudo pip install flask
-    (https://flask.palletsprojects.com/en/1.1.x/quickstart/)
+    https://flask.palletsprojects.com/en/1.1.x/quickstart/
 2. Requires request
 * sudo pip install requests
 
@@ -28,10 +28,12 @@ Before we start we need to install this
 https://api.spotify.com/v1/artists/{id}/top-tracks
 * Adding  “?market=US” after the top tracks gave me an error for the params. Instead I had to make a separate variable PARAMS ={“market”: ‘US’}
 * Another Issues tha I got is index slices when reading through JSON file. To fix this and read clearly I used JSON Formatter
-https://jsonformatter.org/json-pretty-print
+
+    https://jsonformatter.org/json-pretty-print
 
 
 ### Additional Features
 * Add more HTML and CSS to actually make the border filled with Iphone color
 * User Search for the artist instead of hard coding the artist (Down below Link should help us with that)
+ 
 https://developer.spotify.com/documentation/web-api/reference/#category-search
