@@ -15,7 +15,25 @@ Before we start we need to install this
 *	Requires Client Key and Secret Key to access the API
 *	https://developer.spotify.com/documentation/web-api/quick-start/
 *	https://developer.spotify.com/documentation/web-api/reference/#category-artists
-*	
+
+5. 	Sing up for Genius API
+* https://docs.genius.com/
+* Store the generated access_token in env file 
+
+6. After finish this we can host this app on Heroku of free
+* You could sign up for heroku at this link below
+* https://www.heroku.com/
+* Push your up to date git and follow these steps for heroku deployment
+ - heroku login -i
+ - heroku create
+ - git push heroku master
+
+* Go to Heroku site
+ - Make sure to add your keys 
+ - You could do that by going to the dashboard https://dashboard.heroku.com/apps
+ - Click into your app > Settings > Config Vars > Reveal Config Vars > Add key value pairs for each variable.
+ - Add  requirements.txt with all requirements needed to run your app.
+ - Make Procfile with the command needed to run your app.
 
 ## Once this process is done follow these steps to run the program
 1. In cloud9 or any IDE ,first create templates and store ‘Index.html’ and add some line to see if it is running. After doing this run “python app.py”
