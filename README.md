@@ -46,9 +46,13 @@ Before we start we need to install this
     
     https://api.spotify.com/v1/artists/{id}/top-tracks
 * Adding  “?market=US” after the top tracks gave me an error for the params. Instead I had to make a separate variable PARAMS ={“market”: ‘US’}
-* Another Issues tha I got is index slices when reading through JSON file. To fix this and read clearly I used JSON Formatter
+* Another Issues that I got is index slices when reading through JSON file. To fix this and read clearly I used JSON Formatter
 
     https://jsonformatter.org/json-pretty-print
+* Sometimes the songs are not in Genius so you get error. To fix the error you must split the songs name with this "(" and also must use (Try and Catch)
+
+* Another Issue that came up was passing from HTML search bar to Python. I was using regular "import requests" instead of "flask request". This took me 3 hours to figure out for simple mistake
+* Routing to different page was challenging 
 
 
 ### Additional Features
@@ -56,3 +60,4 @@ Before we start we need to install this
 * User Search for the artist instead of hard coding the artist (Down below Link should help us with that)
     
     https://developer.spotify.com/documentation/web-api/reference/#category-search
+* Instead of displaying 1 artist for **Search Artist** I could have dsiplayed at least 10.
