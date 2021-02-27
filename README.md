@@ -1,63 +1,30 @@
-# Requirements
+# Flask and create-react-app
 
-Before we start we need to install this
+## Requirements
+1. `npm install`
+2. `pip install -r requirements.txt`
 
-1. Requires Flask
-*	sudo pip install flask
-    https://flask.palletsprojects.com/en/1.1.x/quickstart/
-2. Requires request
-* sudo pip install requests
+## Setup
+1. Run `echo "DANGEROUSLY_DISABLE_HOST_CHECK=true" > .env.development.local` in the project directory
 
-3. Requires python-dotenv
-*  sudo pip install python-dotenv
+## Run Application
+1. Run command in terminal (in your project directory): `python app.py`
+2. Run command in another terminal, `cd` into the project directory, and run `npm run start`
+3. Preview web page in browser '/'
 
-4. Requires Spotify API
-*	Requires Client Key and Secret Key to access the API
-*	https://developer.spotify.com/documentation/web-api/quick-start/
-*	https://developer.spotify.com/documentation/web-api/reference/#category-artists
+## Deploy to Heroku
+*Don't do the Heroku step for assignments, you only need to deploy for Project 2*
+1. Create a Heroku app: `heroku create --buildpack heroku/python`
+2. Add nodejs buildpack: `heroku buildpacks:add --index 1 heroku/nodejs`
+3. Push to Heroku: `git push heroku main`
 
-5. 	Sing up for Genius API
-* https://docs.genius.com/
-* Store the generated access_token in env file 
+## Techinical Difficulties
+1. Updating the Name to the spectator list after getting Player X and Player O
+2. UseState functionality to update it's state
+    To better understand https://daveceddia.com/usestate-hook-examples/
+3. Also Reseting the Board was tough.
 
-6. After finish this we can host this app on Heroku of free
-* You could sign up for heroku at this link below
-* https://www.heroku.com/
-* Push your up to date git and follow these steps for heroku deployment
-     - heroku login -i
-     - heroku create
-     - git push heroku master
-
-7. Go to Heroku site
-    - Make sure to add your keys 
-     - You could do that by going to the dashboard https://dashboard.heroku.com/apps
-     - Click into your app > Settings > Config Vars > Reveal Config Vars > Add key value pairs for each variable.
-     - Add  requirements.txt with all requirements needed to run your app.
-     - Make Procfile with the command needed to run your app.
-
-## Once this process is done follow these steps to run the program
-1. In cloud9 or any IDE ,first create templates and store ‘Index.html’ and add some line to see if it is running. After doing this run “python app.py”
-2. This should successfully render the HTML file with the help of jinja.
-3. https://hackersandslackers.com/flask-jinja-templates/
-
-
-### Technical Issues that came up during this project
-* Running the program in different port like example (port 8000)
-    
-    https://api.spotify.com/v1/artists/{id}/top-tracks
-* Adding  “?market=US” after the top tracks gave me an error for the params. Instead I had to make a separate variable PARAMS ={“market”: ‘US’}
-* Another Issues that I got is index slices when reading through JSON file. To fix this and read clearly I used JSON Formatter
-
-    https://jsonformatter.org/json-pretty-print
-* Sometimes the songs are not in Genius so you get error. To fix the error you must split the songs name with this "(" and also must use (Try and Catch)
-
-* Another Issue that came up was passing from HTML search bar to Python. I was using regular "import requests" instead of "flask request". This took me 3 hours to figure out for simple mistake
-* Routing to different page was challenging 
-
-
-### Additional Features
-* Add more HTML and CSS to actually make the border filled with Iphone color
-* User Search for the artist instead of hard coding the artist (Down below Link should help us with that)
-    
-    https://developer.spotify.com/documentation/web-api/reference/#category-search
-* Instead of displaying 1 artist for **Search Artist** I could have dsiplayed at least 10.
+## Things still needed/That could Improve
+1. Still need help on storing users into playerX or playerY or spectators
+2. Highlight the winner 
+3. Need Logout button after user login
