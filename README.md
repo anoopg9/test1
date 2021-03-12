@@ -21,13 +21,13 @@
 5. Now create a .env and store your database url and export it.
 6. After following this steps we must run some command in python
     `>> from app import db`
-   `>> import models` 
-    `>> db.create_all()`
-    `>> admin = models.Person(username='admin', email='admin@example.com')`
-    `>> guest = models.Person(username='guest', email='guest@example.com')`
-   `` >> db.session.add(admin)`
-    `>> db.session.add(guest)`
-    `>> db.session.commit()`
+   a>`>> import models` 
+    a>`>> db.create_all()`
+    a>`>> admin = models.Person(username='admin', email='admin@example.com')`
+    a>`>> guest = models.Person(username='guest', email='guest@example.com')`
+   a>` >> db.session.add(admin)`
+    a>`>> db.session.add(guest)`
+    a>`>> db.session.commit()`
 
 ## Deploy to Heroku
 *Don't do the Heroku step for assignments, you only need to deploy for Project 2*
