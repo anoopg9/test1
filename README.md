@@ -29,9 +29,9 @@
     `>> db.session.add(guest)`
     `>> db.session.commit()`
 ## To clear the database
-    `>>import models`
-    `>>models.Leaderboard.query.delete()`
-    `>> db.session.commit()`
+    >>import models
+    >>models.Leaderboard.query.delete()
+    >> db.session.commit()
     
 
 ## Deploy to Heroku
