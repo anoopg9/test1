@@ -11,6 +11,23 @@
 1. Run command in terminal (in your project directory): `python app.py`
 2. Run command in another terminal, `cd` into the project directory, and run `npm run start`
 3. Preview web page in browser '/'
+ 
+## Create a new database on Heroku
+1. First login to your heroku `heroku login -i`
+2. Create a new Heroku app: heroku create
+3. Create a new remote DB on your Heroku app: `heroku addons:create heroku-postgresql:hobby-dev`
+(If that doesn't work, add a -a {your-app-name} to the end of the command, no braces)
+4. See the config vars set by Heroku for you: `heroku config`. Copy paste the value for DATABASE_URL
+5. Now create a .env and store your database url and export it.
+6. After following this steps we must run some command in python
+    `>> from app import db
+    >> import models
+    >> db.create_all()
+    >> admin = models.Person(username='admin', email='admin@example.com')
+    >> guest = models.Person(username='guest', email='guest@example.com')
+    >> db.session.add(admin)
+    >> db.session.add(guest)
+    >> db.session.commit()`
 
 ## Deploy to Heroku
 *Don't do the Heroku step for assignments, you only need to deploy for Project 2*
@@ -19,12 +36,11 @@
 3. Push to Heroku: `git push heroku main`
 
 ## Techinical Difficulties
-1. Updating the Name to the spectator list after getting Player X and Player O
-2. UseState functionality to update it's state
-    To better understand https://daveceddia.com/usestate-hook-examples/
-3. Also Reseting the Board was tough.
+1. Updating score as winner and loser in database and displaying in the Front End.
+2. The problem I faced is that it's emiting infinte types as winner and loser which crashed my databse
+3. I still have dificulties about useEffect.
+
 
 ## Things still needed/That could Improve
-1. Still need help on storing users into playerX or playerY or spectators
-2. Highlight the winner 
-3. Need Logout button after user login
+1. Highlight the winner 
+2. Need Logout button after user login
