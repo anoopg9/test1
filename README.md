@@ -19,15 +19,16 @@
 (If that doesn't work, add a -a {your-app-name} to the end of the command, no braces)
 4. See the config vars set by Heroku for you: `heroku config`. Copy paste the value for DATABASE_URL
 5. Now create a .env and store your database url and export it.
-6. After following this steps we must run some command in python
-    `>> from app import db`
-    `>> import models}` 
-    `>> db.create_all()`
-    `>> admin = models.Leaderboard(username='admin', email='admin@example.com')`
-    `>> guest = models.Leaderboard(username='guest', email='guest@example.com')`
-    ` >> db.session.add(admin)`
-    `>> db.session.add(guest)`
-    `>> db.session.commit()`
+
+## After following this steps we must run some command in python
+    >> from app import db
+    >> import models} 
+    >> db.create_all()
+    >> admin = models.Leaderboard(username='admin', email='admin@example.com')
+    >> guest = models.Leaderboard(username='guest', email='guest@example.com')
+    >> db.session.add(admin)
+    >> db.session.add(guest)
+    >> db.session.commit()
 ## To clear the database
     >>import models
     >>models.Leaderboard.query.delete()
