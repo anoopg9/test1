@@ -52,8 +52,9 @@
 2. Need Logout button after user login
 
 ## Error on Deploying into Heroku
-Since I was getting import flask error although I had imported and installed flask.
-The error was :
+Since I was getting import flask error although I had imported and installed flask. The error was :
+
     >> File "app.py", line 3, in <module>
     >> from flask import Flask, send_from_directory, json, session
     >> ModuleNotFoundError: No module named 'flask
+    
