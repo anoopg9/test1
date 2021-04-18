@@ -50,6 +50,8 @@
 ## Things still needed/That could Improve
 1. Highlight the winner 
 2. Need Logout button after user login shkjfahsk
+3. as
+
 
 ## Error on Deploying into Heroku
 Since I was getting import flask error although I had imported and installed flask. The error was :
